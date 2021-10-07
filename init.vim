@@ -38,305 +38,318 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
- " Useful commenting - gcc, gcap
-  Plug 'tpope/vim-commentary'
+" Useful commenting - gcc, gcap
+Plug 'tpope/vim-commentary'
 
-  " snippets
-  " Plug 'SirVer/ultisnips' "Track the engine
-  Plug 'honza/vim-snippets' 
+" snippets
+" Plug 'SirVer/ultisnips' "Track the engine
+Plug 'honza/vim-snippets' 
 
-  "Auto-complete brackets, parens, quotes in pair.
-  Plug 'jiangmiao/auto-pairs' 
-
-
-  " Linter
-  Plug 'w0rp/ale'
-
-  "Plug 'dense-analysis/ale', { 'do': 'pip install flake8 isort yapf' } "Lint
-
-  " Python formatting
-  Plug 'ambv/black' "TODO read a doc
-
-  " Manipulate surrounding chars such as quotes and brackets
-  Plug 'tpope/vim-surround'
-
-  " Auto complete navigation with tab
-  " Plug 'ervandew/supertab'
-
-  " Align tables
-  Plug 'godlygeek/tabular'
-
-  " Explorer plugin
-  Plug 'preservim/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'ryanoasis/vim-devicons'
-  " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  "Plug 'wakatime/vim-wakatime' "Gerenciamento de tempo de uso em projects
+"Auto-complete brackets, parens, quotes in pair.
+Plug 'jiangmiao/auto-pairs' 
 
 
-  " Markdown editing and preview
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-  Plug 'gabrielelana/vim-markdown'
-  "Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-  "Plug tpope/vim-markdown
+" Linter
+Plug 'w0rp/ale'
 
-  "Scroll fast
-  " Plug 'wfxr/code-minimap'
-  " Plug 'wfxr/minimap.vim'
+"Plug 'dense-analysis/ale', { 'do': 'pip install flake8 isort yapf' } "Lint
 
-  "Soft or Hard Word Wrapping
-  Plug 'reedes/vim-pencil' " TODO: ver com urgencia a doc quebra line muito util 
+" Python formatting
+Plug 'ambv/black' "TODO read a doc
 
-  " spell check TODO: verificar com urgencia e configurarar dicionario pt-bt não
-  " instalado
-  " http://ftp.vim.org/vim/runtime/spell/
-  "Plug reedes/vim-lexical
+" Manipulate surrounding chars such as quotes and brackets
+Plug 'tpope/vim-surround'
 
-  " Apagar ambos quotes nas palavras os comandos ds, cs, yss
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-repeat'
+" Auto complete navigation with tab
+" Plug 'ervandew/supertab'
 
-  " Distraction-free writing in Vim. TODO: não instado 
-  " Plug 'junegunn/goyo.vim'
+" Align tables
+Plug 'godlygeek/tabular'
 
-  " latex
-  Plug 'lervag/vimtex'
+" Explorer plugin
+" Plug 'preservim/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-  call plug#end()
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+
+"Plug 'wakatime/vim-wakatime' "Gerenciamento de tempo de uso em projects
 
 
-  syntax on
-  filetype plugin indent on
+" Markdown editing and preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'gabrielelana/vim-markdown'
+"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"Plug tpope/vim-markdown
 
-  set nocompatible
-  set guicursor=
-  set hidden
-  set number
-  set relativenumber
-  set updatetime=50
-  set incsearch
-  set noerrorbells
-  set scrolloff=8
-  set noshowmode
-  set autoread
-  set hlsearch
-  set ignorecase
-  " set nohlsearch
-  set smartindent
-  set inccommand=split
-  set termguicolors
-  set expandtab
-  set clipboard+=unnamedplus
-  set textwidth=80  " lines longer than 79 columns will be broken
-  set wrap tw=80
-  set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
-  set tabstop=4     " a hard TAB displays as 4 columns
-  set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
-  set shiftround    " round indent to multiple of 'shiftwidth'
-  set autoindent    " align the new line indent with the previous line
-  set encoding=utf-8
-  set fileencoding=utf-8
-  set fileencodings=utf-8
-  set backspace=indent,eol,start
-  set fileformats=unix,dos,mac
-  set cursorline
+"Scroll fast
+" Plug 'wfxr/code-minimap'
+" Plug 'wfxr/minimap.vim'
 
-  " TextEdit might fail if hidden is not set.
-  set hidden
+"Soft or Hard Word Wrapping
+Plug 'reedes/vim-pencil' " TODO: ver com urgencia a doc quebra line muito util 
 
-  " Some servers have issues with backup files, see #649.
-  set nobackup
-  set nowritebackup
-  set noswapfile
-  set nowrap
+" spell check TODO: verificar com urgencia e configurarar dicionario pt-bt não
+" instalado
+" http://ftp.vim.org/vim/runtime/spell/
+"Plug reedes/vim-lexical
 
-  " Give more space for displaying messages.
-  set cmdheight=2
+" Apagar ambos quotes nas palavras os comandos ds, cs, yss
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
-  " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-  " delays and poor user experience.
+" Distraction-free writing in Vim. TODO: não instado 
+" Plug 'junegunn/goyo.vim'
 
-  " Don't pass messages to |ins-completion-menu|.
-  set shortmess+=c
+" latex
+Plug 'lervag/vimtex'
 
-  " Always show the signcolumn, otherwise it would shift the text each time
-  " diagnostics appear/become resolved.
-  if has("patch-8.1.1564")
+call plug#end()
+
+
+syntax on
+filetype plugin indent on
+
+set nocompatible
+set guicursor=
+set hidden
+set number
+set relativenumber
+set updatetime=50
+set incsearch
+set noerrorbells
+set scrolloff=8
+set noshowmode
+set autoread
+set hlsearch
+set ignorecase
+" set nohlsearch
+set smartindent
+set inccommand=split
+set termguicolors
+set expandtab
+set clipboard+=unnamedplus
+set textwidth=80  " lines longer than 79 columns will be broken
+set wrap tw=80
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4     " a hard TAB displays as 4 columns
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous line
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set backspace=indent,eol,start
+set fileformats=unix,dos,mac
+set cursorline
+
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+set noswapfile
+set nowrap
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
     " Recently vim can merge signcolumn and number column into one
     set signcolumn=number
-  else
+else
     set signcolumn=yes
-  endif
+endif
 
-  " set colorcolumn=80,100,120
-  " highlight ColorColumn ctermbg=0 guibg=lighgrey
-  " highlight Comment ctermbg=red
+" set colorcolumn=80,100,120
+" highlight ColorColumn ctermbg=0 guibg=lighgrey
+" highlight Comment ctermbg=red
 
-  set mousemodel=popup
-  set mouse=a
-  set t_Co=256
-  set guioptions=egmrti
-  set gfn=Monospace\ 10
-  "Use modeline
-  set modeline
-  set modelines=10
+set mousemodel=popup
+set mouse=a
+set t_Co=256
+set guioptions=egmrti
+set gfn=Monospace\ 10
+"Use modeline
+set modeline
+set modelines=10
 
-  " set title
-  " set titleold="Terminal"
-  " set titlestring=%F
-  " set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+" set title
+" set titleold="Terminal"
+" set titlestring=%F
+" set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
-  set list
-  set listchars+=tab:>-,space:.
+set list
+set listchars+=tab:>-,space:.
 
-  " Set the variables
+" Set the variables
 
-  "" fzf.vim
-  set wildmode=list:longest,list:full
-  " set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-  " set wildignore+=*.obj,.git,*.rbc,*.pyc,__pycache__
-  " let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
-  " let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-  let $FZF_DEFAULT_OPTS='--reverse'
+"" fzf.vim
+set wildmode=list:longest,list:full
+" set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+" set wildignore+=*.obj,.git,*.rbc,*.pyc,__pycache__
+" let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+" let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
 
-  let python_highlight_all = 1
-  " let g:polyglot_disabled = ['python', 'markdown', 'mkd',] 
+let python_highlight_all = 1
+" let g:polyglot_disabled = ['python', 'markdown', 'mkd',] 
 
-  "IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-  let g:indentLine_faster = 1
+"IndentLine
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '┆'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_faster = 1
 
-  "themes
-  let g:gruvbox_contrast_dark='hard'
+"themes
+let g:gruvbox_contrast_dark='hard'
 
-  " vim-airline
-  " let g:airline_theme = 'powerlineish'
-  let g:airline_theme='gruvbox'
-  let g:airline#extensions#branch#enabled=1
-  let g:airline#extensions#ale#enabled=1
-  let g:airline#extensions#tabline#enabled=1
-  let g:airline#extensions#tagbar#enabled=1
-  let g:airline_skip_empty_sections=1
-  let g:airline#extensions#virtualenv#enabled=1
-  let g:airline_section_x='%{PencilMode()}' " reedes/vim-pencil
+" vim-airline
+let g:airline#extensions#tabline#enabled=1
+" let g:airline_powerline_fonts=1
+let g:airline_theme="gruvbox"
+let g:airline_statusline_ontop=0
 
-  " format text
-  " reedes/vim-pencil
-  let g:pencil#textwidth = 79
-  let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
-  let g:pencil#autoformat = 1      " 0=disable, 1=enable (def)
-  let g:pencil#mode_indicators = {'hard': '␍', 'auto': 'ª', 'soft': '⤸', 'off': '',}
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
 
-  " ale
-  let g:ale_linters = {}
-  :call extend(g:ale_linters, {
-      \'python': ['flake8'], })
-  let g:ale_disable_lsp = 1
-  " " Config do coc plugin
-  " let g:ale_fix_on_save = 1
-  " let g:ale_fixers = {
-  " \   'python': [
-  " \       'isort',
-  " \       'flake8',
-  " \       'black',
-  " \       'yapf',
-  " \       'remove_trailing_lines',
-  " \       'trim_whitespace'
-  " \   ]
-  " \}
+let g:airline#extensions#tabline#formatter='jsformatter'
+
+call airline#parts#define_raw('linenr', '%l')
+call airline#parts#define_accent('linenr', 'bold')
+let g:airline_section_z = airline#section#create(['%3p%%  ',
+            \ g:airline_symbols.linenr .' ', 'linenr', ':%c '])
 
 
-  " explorer
-  let g:netrw_browse_split = 2
-  let g:netrw_banner = 0
-  let g:netrw_winsize = 25
-
-  " markdown 
-  " filetype plugin on
-  "Uncomment to override defaults:
-  let g:instant_markdown_slow = 1
-  let g:instant_markdown_autostart = 1
-  let g:instant_markdown_open_to_the_world = 1
-  let g:instant_markdown_allow_unsafe_content = 1
-  let g:instant_markdown_allow_external_content = 0
-  let g:instant_markdown_mathjax = 1
-  let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-  let g:instant_markdown_autoscroll = 0
-  let g:instant_markdown_port = 8888
-  let g:instant_markdown_python = 1
-  let g:instant_markdown_browser = "firefox --new-window"
 
 
-  " iamcco/vim-markdown
-  let g:mkdp_auto_start=0
 
-  " themes/color
-  colorscheme gruvbox
-  set guifont=DroidSansMono\ Nerd\ Font\ 11
-  " let ayucolor="mirage"
-  set background=dark
-  " Remaps
-  let mapleader="\<space>"
+" format text
+" reedes/vim-pencil
+let g:pencil#textwidth = 79
+let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
+let g:pencil#autoformat = 1      " 0=disable, 1=enable (def)
+let g:pencil#mode_indicators = {'hard': '␍', 'auto': 'ª', 'soft': '⤸', 'off': '',}
 
-  nnoremap <leader>; A;<esc>
-  nnoremap <leader>, A,<esc>
-  nnoremap <leader>: A:<cr>
+" ale
+let g:ale_linters = {}
+:call extend(g:ale_linters, {
+            \'python': ['flake8'], })
+let g:ale_disable_lsp = 1
+" " Config do coc plugin
+" let g:ale_fix_on_save = 1
+" let g:ale_fixers = {
+" \   'python': [
+" \       'isort',
+" \       'flake8',
+" \       'black',
+" \       'yapf',
+" \       'remove_trailing_lines',
+" \       'trim_whitespace'
+" \   ]
+" \}
 
-  " Sweet Sweet FuGITive TODO: verificar a doc deste plug vim-fugitive
-  nmap <leader>gh :diffget //3<CR>
-  nmap <leader>gu :diffget //2<CR>
-  nmap <leader>gs :G<CR>
 
-  " reload config 
-  nnoremap <leader>sc :source ~/.config/nvim/init.vim<cr> 
+" explorer
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
 
-  "Explorer
-  "map <F2> <esc>:Vex<cr>
-  map <F2> :NERDTreeToggle<CR>
+" markdown 
+" filetype plugin on
+"Uncomment to override defaults:
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 1
+let g:instant_markdown_open_to_the_world = 1
+let g:instant_markdown_allow_unsafe_content = 1
+let g:instant_markdown_allow_external_content = 0
+let g:instant_markdown_mathjax = 1
+let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+let g:instant_markdown_autoscroll = 0
+let g:instant_markdown_port = 8888
+let g:instant_markdown_python = 1
+let g:instant_markdown_browser = "firefox --new-window"
 
 
-  "save
-  nnoremap <F12> <esc>:w<cr> 
-  inoremap <F12> <esc>:w<cr>
+" iamcco/vim-markdown
+let g:mkdp_auto_start=0
 
-  " Tagbar
-  nmap <silent> <F4> :TagbarToggle<CR>
-  let g:tagbar_autofocus = 1
-  
-  " split
-  nnoremap <leader>vE :vsplit ~/.config/nvim/init.vim<cr>
-  noremap <leader>] :vsplit 
-  nnoremap <leader>note :vsplit ~/Documents/notebooks/<cr>
+" themes/color
+colorscheme gruvbox
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+" let ayucolor="mirage"
+set background=dark
+" Remaps
+let mapleader="\<space>"
 
-  " tab
-  nnoremap <leader>tnote :tabnew ~/Documents/notebooks/<cr>
-  nnoremap <leader>dp :tabnew ~/Documents/notebooks/data.md<cr>
-  nnoremap <leader>dp :tabnew ~/Documents/notebooks/data.md<cr>
-  " create tab
-  noremap <leader>vn :tabnew 
-  noremap <leader>vo :tabonly 
-  " Go to tab by number
-  noremap <leader>1 1gt
-  noremap <leader>2 2gt
-  noremap <leader>3 3gt
-  noremap <leader>4 4gt
-  noremap <leader>5 5gt
-  noremap <leader>6 6gt
-  noremap <leader>7 7gt
-  noremap <leader>8 8gt
-  noremap <leader>9 9gt
-  noremap <leader>0 :tablast<cr>
+nnoremap <leader>; A;<esc>
+nnoremap <leader>, A,<esc>
+nnoremap <leader>: A:<cr>
 
-  "Define o atalho Ctrl + P para utilizar o fzf fileS
-  nnoremap <c-p> :Files<cr> 
-  nnoremap <c-f> :Ag<space><cr>
-  nnoremap <C-Down> ddp
-  nnoremap <C-Up> ddkP
+" Sweet Sweet FuGITive TODO: verificar a doc deste plug vim-fugitive
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
 
-  " Find files using Telescope command-line sugar.
+" reload config 
+nnoremap <leader>sc :source ~/.config/nvim/init.vim<cr> 
+
+"Explorer
+"map <F2> <esc>:Vex<cr>
+" map <F2> :NERDTreeToggle<CR>
+
+
+"save
+" nnoremap <F12> <esc>:w<cr> 
+" inoremap <F12> <esc>:w<cr>
+
+" Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+" split
+nnoremap <leader>vE :vsplit ~/.config/nvim/init.vim<cr>
+noremap <leader>] :vsplit 
+nnoremap <leader>note :vsplit ~/Documents/notebooks/<cr>
+
+" tab
+nnoremap <leader>tnote :tabnew ~/Documents/notebooks/<cr>
+nnoremap <leader>dp :tabnew ~/Documents/notebooks/data.md<cr>
+nnoremap <leader>dp :tabnew ~/Documents/notebooks/data.md<cr>
+" create tab
+noremap <leader>vn :tabnew 
+noremap <leader>vo :tabonly 
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+"Define o atalho Ctrl + P para utilizar o fzf fileS
+nnoremap <c-p> :Files<cr> 
+nnoremap <c-f> :Ag<space><cr>
+nnoremap <C-Down> ddp
+nnoremap <C-Up> ddkP
+
+" Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -407,30 +420,30 @@ nmap <leader>mt <Plug>MarkdownPreviewToggle
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
 " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
 if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -448,11 +461,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -466,11 +479,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Applying codeAction to the selected region.

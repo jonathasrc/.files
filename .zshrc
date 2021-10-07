@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-<<<<<<< Updated upstream
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 compinit
@@ -13,13 +12,10 @@ complete -C "/usr/local/bin/aws_completer" aws
 # export NOTE="date +%d-%m-%Y"
 ## If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/poetry/bin/bin:$PATH
-=======
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 
-
->>>>>>> Stashed changes
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$(whoami)/.oh-my-zsh"
 
@@ -89,7 +85,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-<<<<<<< Updated upstream
 plugins=(
     archlinux
     git
@@ -113,20 +108,7 @@ plugins=(
     aws
     ruby
     kubectl
-=======
-plugins=(git
-	tmux
-    github
-    git
-    ruby
-	python
-	pyenv
-	tmuxinator
-	docker
-	dotenv
-    poetry
->>>>>>> Stashed changes
-	)
+)
 
 
 source $ZSH/oh-my-zsh.sh
