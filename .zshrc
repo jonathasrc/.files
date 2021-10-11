@@ -11,24 +11,23 @@
 # # Use powerline ------------------------------------------------------------
 # config original do Manjaro Kde Plasma
 
-USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+# USE_POWERLINE="true"
+# # Source manjaro-zsh-configuration
+# if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+#   source /usr/share/zsh/manjaro-zsh-config
+# fi
+# # Use manjaro zsh prompt
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#   source /usr/share/zsh/manjaro-zsh-prompt
+# fi
 
 # Path to your oh-my-zsh installation ----------------------------------------
-export ZSH="/home/$whoami/oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
+# load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,9 +100,9 @@ plugins=(
     python
     rsync
     tmux
+    fast-syntax-highlighting
     zsh-interactive-cd
     zsh-navigation-tools
-    zsh-syntax-highlighting
     zsh-autosuggestions
 )
 
@@ -122,6 +121,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+export TERM='xterm-256color'
 
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"

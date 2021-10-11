@@ -34,9 +34,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy finder <c-p>. Verificar doc para instalar dependencias 
 " telescope nvim 
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 
 " Useful commenting - gcc, gcap
 Plug 'tpope/vim-commentary'
@@ -67,10 +67,10 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 
 " Explorer plugin
-" Plug 'preservim/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'ryanoasis/vim-devicons'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
