@@ -1,12 +1,13 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # # Use powerline ------------------------------------------------------------
 # config original do Manjaro Kde Plasma
@@ -27,7 +28,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -90,7 +92,9 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    aws
     archlinux
+    debian
     docker
     docker-compose
     git
@@ -98,8 +102,12 @@ plugins=(
     github
     npm
     python
+    poetry
     rsync
     tmux
+    systemd
+    colorize
+    terraform
     fast-syntax-highlighting
     zsh-interactive-cd
     zsh-navigation-tools
@@ -110,6 +118,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration ---------------------------------------------------------
 
+# source $HOME/.config/environment
 # export MANPATH="/usr/local/man:$MANPATH
 
 # You may need to manually set your language environment
@@ -122,8 +131,8 @@ else
   export EDITOR='nvim'
 fi
 
-export TERM='xterm-256color'
-
+# export TERM='xterm-256color' 
+export TERM="screen-256color" 
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -136,5 +145,31 @@ export TERM='xterm-256color'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias v="nvim"
+alias iv="nvim ~/.i3/config ~/.i3/status.toml"
+alias vv="nvim ~/.config/nvim/init.vim"
+alias vz="nvim ~/.zshrc"
+alias tv="nvim ~/.tmux.conf.local"
+alias :q="exit"
+alias :wq="exit"
+
+alias cp="cp -i"                          # confirm before overwriting something
+alias rm="rm -i"
+alias mv="mv -i"
+alias ..="cd .."
+
+alias df="df -h"                          # human-readable sizes
+alias free="free -m"                      # show sizes in MB
+alias more="less"
+
+alias vi="nvim"
+alias vim="vim"
+# alias up="sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+export PATH="$HOME/.poetry/bin:$PATH"
