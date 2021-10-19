@@ -15,6 +15,8 @@ Plug 'airblade/vim-gitgutter' "TODO read doc and config
 
 " Auto commplete and language server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+
 "
 "" DEvicons for trees and bars
 Plug 'ryanoasis/vim-devicons'
@@ -144,6 +146,7 @@ set fileencodings=utf-8
 set backspace=indent,eol,start
 set fileformats=unix,dos,mac
 set cursorline
+" set ttymouse=sgr            "Mouse selcetion
 
 " TextEdit might fail if hidden is not set.
 set hidden
