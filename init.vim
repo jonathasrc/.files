@@ -315,8 +315,8 @@ nnoremap <leader>sc :source ~/.config/nvim/init.vim<cr>
 
 
 "save
-" nnoremap <F12> <esc>:w<cr> 
-" inoremap <F12> <esc>:w<cr>
+nnoremap <F12> <esc>:w<cr> 
+inoremap <F12> <esc>:w<cr>
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>

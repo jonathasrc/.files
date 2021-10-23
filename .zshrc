@@ -132,7 +132,7 @@ else
 fi
 
 # export TERM='xterm-256color' 
-export TERM="screen-256color" 
+# export TERM="screen-256color" 
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -145,26 +145,27 @@ export TERM="screen-256color"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias v="nvim"
-alias iv="nvim ~/.i3/config ~/.i3/status.toml"
-alias vv="nvim ~/.config/nvim/init.vim"
-alias vz="nvim ~/.zshrc"
-alias tv="nvim ~/.tmux.conf.local"
-alias :q="exit"
-alias :wq="exit"
+# alias v="nvim"
+# alias iv="nvim ~/.i3/config ~/.i3/status.toml"
+# alias vv="nvim ~/.config/nvim/init.vim"
+# alias vz="nvim ~/.zshrc"
+# alias tv="nvim ~/.tmux.conf.local"
+# alias :q="exit"
+# alias :wq="exit"
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias rm="rm -i"
-alias mv="mv -i"
-alias ..="cd .."
+# alias cp="cp -i"                          # confirm before overwriting something
+# alias rm="rm -i"
+# alias mv="mv -i"
+# alias ..="cd .."
 
-alias df="df -h"                          # human-readable sizes
-alias free="free -m"                      # show sizes in MB
-alias more="less"
+# alias df="df -h"                          # human-readable sizes
+# alias free="free -m"                      # show sizes in MB
+# alias more="less"
 
-alias vi="nvim"
-alias vim="vim"
-# alias up="sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update"
+# alias vi="nvim"
+# alias vim="vim"
+alias t='terraform'
+alias up='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
