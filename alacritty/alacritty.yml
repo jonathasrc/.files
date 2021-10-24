@@ -1,0 +1,18 @@
+font:
+  normal:
+    family: "MesloLGS NF"
+
+  size: 11
+
+env:
+  TERM: xterm-256color
+
+# When set to `true`, selected text will be copied to the primary clipboard.
+save_to_clipboard: true
+
+# Background opacity
+background_opacity: 0.7
+
+import:
+  - /home/dom/git/alacritty-theme/themes/gruvbox_material.yml
+
