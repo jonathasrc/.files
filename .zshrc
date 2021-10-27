@@ -28,8 +28,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+
+ZSH_THEME="obraun"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -142,21 +143,8 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases ------------------------------------------------------------
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias v="nvim"
-# alias iv="nvim ~/.i3/config ~/.i3/status.toml"
-# alias vv="nvim ~/.config/nvim/init.vim"
-# alias vz="nvim ~/.zshrc"
-# alias tv="nvim ~/.tmux.conf.local"
-# alias :q="exit"
-# alias :wq="exit"
 
-# alias cp="cp -i"                          # confirm before overwriting something
-# alias rm="rm -i"
-# alias mv="mv -i"
-# alias ..="cd .."
 
 alias t='terraform'
 alias up='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update'

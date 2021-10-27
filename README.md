@@ -67,6 +67,21 @@ and the tooling and utilities I use.
  - xclip
      -
 ### auto complete
+
+## Terminal
+- Alacritty
+- zsh
+- powerlevel10k
+- Tmux
+- [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
+```bash
+ln -s ~/github/dotfiles/.tmux.conf.local
+```
+
+ ## Editor
+ - [Neovim](https://github.com/neovim/neovim)
+
+### Smart editor
  - coc.nvim
     - coc-explorer
     - coc-highlight
@@ -86,11 +101,19 @@ and the tooling and utilities I use.
      # Inserindo as configuração do Git
      ln -s ~/github/git ~/.config/
      ```
+=======
+## Aplication
+- snapd
+   - authy
+- flathub
+ ## Developer
  - [Docker](https://www.docker.com/)
+ - Docker-compose
  - [Terraform](https://www.terraform.io/docs/index.html#get-started)
  - [Vagrant](https://www.vagrantup.com/)
  - [aws-cli:2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
  - github-cli
  - [Poetry](https://python-poetry.org/docs/)
  - fzf
+ - [Poetry](https://python-poetry.org/docs/) master
 
