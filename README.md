@@ -30,6 +30,7 @@ ln -s ~/github/dotfiles/.tmux.conf.local
 - flathub
  ## Developer
  - [Docker](https://www.docker.com/)
+ - Docker-compose
  - [Terraform](https://www.terraform.io/docs/index.html#get-started)
  - [Vagrant](https://www.vagrantup.com/)
  - [aws-cli:2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
