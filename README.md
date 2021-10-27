@@ -51,6 +51,11 @@ and the tooling and utilities I use.
       - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
       - 
 - powerlevel10k
+- Tmux
+- [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
+```bash
+ln -s ~/github/dotfiles/.tmux.conf.local
+```
 
 ## Editor
  - [Neovim](https://github.com/neovim/neovim)
