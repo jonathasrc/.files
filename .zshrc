@@ -137,7 +137,12 @@ else
   export EDITOR='nvim'
 fi
 
+<<<<<<< HEAD
 export TERM='screen-256color' 
+=======
+# export TERM='xterm-256color' 
+# export TERM="screen-256color" 
+>>>>>>> fa93847 (atualizando dotfiles)
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -150,6 +155,7 @@ export TERM='screen-256color'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+<<<<<<< HEAD
 alias v="nvim"
 alias iv="nvim ~/.i3/config ~/.i3/status.toml"
 alias vv="nvim ~/.config/nvim/init.vim"
@@ -166,6 +172,23 @@ alias ..="cd .."
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias more=less
+=======
+# alias v="nvim"
+# alias iv="nvim ~/.i3/config ~/.i3/status.toml"
+# alias vv="nvim ~/.config/nvim/init.vim"
+# alias vz="nvim ~/.zshrc"
+# alias tv="nvim ~/.tmux.conf.local"
+# alias :q="exit"
+# alias :wq="exit"
+
+# alias cp="cp -i"                          # confirm before overwriting something
+# alias rm="rm -i"
+# alias mv="mv -i"
+# alias ..="cd .."
+
+alias t='terraform'
+alias up='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update'
+>>>>>>> fa93847 (atualizando dotfiles)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
