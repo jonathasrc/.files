@@ -94,11 +94,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     aws
     archlinux
-<<<<<<< HEAD
     aws
     colorize
-=======
->>>>>>> bbe734c (atualizacao dotfiles)
     debian
     docker
     docker-compose
@@ -114,14 +111,11 @@ plugins=(
     systemd
     terraform
     tmux
-<<<<<<< HEAD
     zsh-autosuggestions
-=======
     systemd
     colorize
     terraform
     fast-syntax-highlighting
->>>>>>> bbe734c (atualizacao dotfiles)
     zsh-interactive-cd
     zsh-navigation-tools
 )
@@ -130,11 +124,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration ---------------------------------------------------------
 
-<<<<<<< HEAD
-# source $HOME/.config/environment
-=======
 source $HOME/.config/environment
->>>>>>> bbe734c (atualizacao dotfiles)
 # export MANPATH="/usr/local/man:$MANPATH
 
 # You may need to manually set your language environment
@@ -147,12 +137,7 @@ else
   export EDITOR='nvim'
 fi
 
-# export TERM='xterm-256color' 
-<<<<<<< HEAD
-# export TERM="screen-256color" 
-=======
 export TERM='screen-256color' 
->>>>>>> bbe734c (atualizacao dotfiles)
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -165,29 +150,6 @@ export TERM='screen-256color'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-<<<<<<< HEAD
-# alias v="nvim"
-# alias iv="nvim ~/.i3/config ~/.i3/status.toml"
-# alias vv="nvim ~/.config/nvim/init.vim"
-# alias vz="nvim ~/.zshrc"
-# alias tv="nvim ~/.tmux.conf.local"
-# alias :q="exit"
-# alias :wq="exit"
-
-# alias cp="cp -i"                          # confirm before overwriting something
-# alias rm="rm -i"
-# alias mv="mv -i"
-# alias ..="cd .."
-
-# alias df="df -h"                          # human-readable sizes
-# alias free="free -m"                      # show sizes in MB
-# alias more="less"
-
-# alias vi="nvim"
-# alias vim="vim"
-alias t='terraform'
-alias up='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update'
-=======
 alias v="nvim"
 alias iv="nvim ~/.i3/config ~/.i3/status.toml"
 alias vv="nvim ~/.config/nvim/init.vim"
@@ -204,11 +166,6 @@ alias ..="cd .."
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias more=less
-
-alias vi=nvim
-alias vim=nvim
-alias up="sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update"
->>>>>>> bbe734c (atualizacao dotfiles)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
