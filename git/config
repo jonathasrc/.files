@@ -5,34 +5,8 @@
 [core]
 	editor = nvim
 
-; [color]
-;     ui = true
-;     pager = true
-
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-
-; [color "diff"]
-;     meta = yellow bold
-;     frag = magenta bold
-;     old = red bold
-;     new = green bold
-
 [merge]
 	tool = vimdiff
-
-[mergetool]
-	keepBackup = false
-    
-[mergetool "vimdiff"]
-	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-
-; [color "status"]
-;     added = yellow
-;     changed = green
-;     untracked = cyan
 
 [push]
     default = matching
