@@ -92,7 +92,6 @@ ZSH_THEME="obraun"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    aws
     archlinux
     aws
     colorize
@@ -106,16 +105,11 @@ plugins=(
     npm
     poetry
     python
-    poetry
     rsync
     systemd
     terraform
     tmux
     zsh-autosuggestions
-    systemd
-    colorize
-    terraform
-    fast-syntax-highlighting
     zsh-interactive-cd
     zsh-navigation-tools
 )
