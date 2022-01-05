@@ -102,9 +102,14 @@ Plug 'reedes/vim-pencil' " TODO: ver com urgencia a doc quebra line muito util
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+" Runner language 
+Plug 'thinca/vim-quickrun'
+Plug 'tpope/vim-dispatch'
 " Distraction-free writing in Vim. TODO: não instado 
 " Plug 'junegunn/goyo.vim'
-
+" Vim + tmux
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/vimux'
 " latex
 Plug 'lervag/vimtex'
 
@@ -294,6 +299,7 @@ colorscheme gruvbox
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 " let ayucolor="mirage"
 set background=dark
+
 " Remaps
 let mapleader="\<space>"
 
@@ -316,7 +322,9 @@ nnoremap <leader>sc :source ~/.config/nvim/init.vim<cr>
 
 "save
 nnoremap <F12> <esc>:w<cr> 
-inoremap <F12> <esc>:w<cr>
+
+" inoremap <F12> <esc>:w<cr>
+" nnoremap <C-s> :w!<CR>
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -360,6 +368,12 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "Abrir o terminal 
 nnoremap <leader>' :sp term://zsh<cr>
+
+"Vim + tmux
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
 
 "Comentar linhas usando <leader> + /
 "Config do plugin tpope/Commentary
@@ -550,6 +564,13 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR> 
 "
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+function! OpenTerminal()
+  split term://zsh
+  resize 10
+endfunction
+nnoremap <c-j> :call OpenTerminal()<CR>
 
 cmap w!! w !sudo tee >/dev/null %
 
