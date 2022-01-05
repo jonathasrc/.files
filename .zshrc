@@ -144,11 +144,6 @@ fi
 #
 # Example aliases ------------------------------------------------------------
 
-
-
-alias t='terraform'
-alias up='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && flatpak update'
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
