@@ -260,4 +260,4 @@ dmypy.json
 .pytype/
 
 teste.sh
-github_cli.token
+var_environment
