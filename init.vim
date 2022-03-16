@@ -1,12 +1,18 @@
 call plug#begin()
 " themes
 Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'ayu-theme/ayu-vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+
 " Status and tab bar TODO:Config
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme = 'gruvbox_material'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline_skip_empty_sections = 1
 
 " Git integrations
 Plug 'tpope/vim-fugitive' "TODO: Read doc
@@ -15,9 +21,20 @@ Plug 'airblade/vim-gitgutter' "TODO read doc and config
 
 " Auto commplete and language server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
-
-"
+let g:coc_global_extensions = [
+            \'coc-json',
+            \'coc-git',
+            \'coc-gist',
+            \'coc-json',
+            \'coc-css',
+            \'coc-diagnostic',
+            \'coc-explorer',
+            \'coc-highlight',
+            \'coc-html',
+            \'coc-pyright',
+            \'coc-sh',
+            \'coc-tsserver']
+            
 "" DEvicons for trees and bars
 Plug 'ryanoasis/vim-devicons'
 
@@ -224,26 +241,6 @@ let g:indentLine_faster = 1
 "themes
 let g:gruvbox_contrast_dark='hard'
 
-" vim-airline
-let g:airline#extensions#tabline#enabled=1
-" let g:airline_powerline_fonts=1
-let g:airline_theme="gruvbox"
-let g:airline_statusline_ontop=0
-
-let g:airline#extensions#tabline#left_sep=' '
-let g:airline#extensions#tabline#left_alt_sep='|'
-
-let g:airline#extensions#tabline#formatter='jsformatter'
-
-call airline#parts#define_raw('linenr', '%l')
-call airline#parts#define_accent('linenr', 'bold')
-let g:airline_section_z = airline#section#create(['%3p%%  ',
-            \ g:airline_symbols.linenr .' ', 'linenr', ':%c '])
-
-
-
-
-
 " format text
 " reedes/vim-pencil
 let g:pencil#textwidth = 79
@@ -295,7 +292,7 @@ let g:instant_markdown_browser = "firefox --new-window"
 let g:mkdp_auto_start=0
 
 " themes/color
-colorscheme gruvbox
+colorscheme gruvbox-material
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 " let ayucolor="mirage"
 set background=dark
@@ -563,14 +560,14 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR> 
-"
-" start terminal in insert mode
+
+"" start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 function! OpenTerminal()
   split term://zsh
   resize 10
 endfunction
-nnoremap <c-j> :call OpenTerminal()<CR>
+nnoremap <F5> :call OpenTerminal()<CR>
 
 cmap w!! w !sudo tee >/dev/null %
 
