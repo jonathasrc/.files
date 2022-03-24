@@ -295,7 +295,6 @@ let g:mkdp_auto_start=0
 " themes/color
 colorscheme gruvbox-material
 set guifont=DroidSansMono\ Nerd\ Font\ 11
-" let ayucolor="mirage"
 set background=dark
 
 " Remaps
