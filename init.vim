@@ -52,10 +52,11 @@ Plug 'terryma/vim-multiple-cursors'
 " Fuzzy search
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy finder <c-p>. Verificar doc para instalar dependencias 
+"
 " telescope nvim 
-" Plug 'nvim-lua/popup.nvim'
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Useful commenting - gcc, gcap
 Plug 'tpope/vim-commentary'
@@ -426,6 +427,11 @@ nmap <leader>mp <Plug>MarkdownPreview
 nmap <leader>ms <Plug>MarkdownPreviewStop
 nmap <leader>mt <Plug>MarkdownPreviewToggle
 
+"" Coc-markmap
+" Create markmap from the whole file
+nmap <Leader>m <Plug>(coc-markmap-create)
+" Create markmap from the selected lines
+vmap <Leader>m <Plug>(coc-markmap-create-v)
 
 "
 
