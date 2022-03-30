@@ -7,7 +7,7 @@ fi
 
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # # Use powerline ------------------------------------------------------------
 # config original do Manjaro Kde Plasma
@@ -132,7 +132,7 @@ else
   export EDITOR='nvim'
 fi
 
-# export TERM='xterm-256color' 
+export TERM='xterm-256color' 
 # export TERM="screen-256color" 
 #Compilation flags
 # export ARCHFLAGS="-arch x86_64"
