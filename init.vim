@@ -31,7 +31,6 @@ let g:coc_global_extensions = [
             \'coc-explorer',
             \'coc-highlight',
             \'coc-html',
-            \'coc-pyright',
             \'coc-sh',
             \'coc-tsserver']
             
