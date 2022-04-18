@@ -1,15 +1,13 @@
 [user]
     name = Jonathas Rodrigues
     email = jonathasrc96@gmail.com
-
 [core]
     editor = nvim
-
 [init]
     defaultBranch = main
-    
 [mergetool "nvim"]
     cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
-    
 [merge]
     tool = nvim 
+[pull]
+	rebase = true
